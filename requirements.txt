@@ -1,4 +1,6 @@
-tensorflow == 2.9.2
-docx2txt == 0.8
-numpy  == 1.23.4
-glob
+tensorflow
+docx2txt
+numpy
+streamlit
+tensorflow-hub
+scikit-learn
