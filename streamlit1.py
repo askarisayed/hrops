@@ -43,7 +43,7 @@ def main():
             for element in page_layout:
                 st.write(element)
     
-    sim = backend.check_sim(JD_process,resumes)
+    sim = backend.check_sim(docx_file,uploaded_file)
     
     if st.button("Get the Top Resumes"):
         st.write("here are top resumes",sim)
