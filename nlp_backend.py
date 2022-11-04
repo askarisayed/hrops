@@ -1,8 +1,8 @@
-# import tensorflow as tf
+import tensorflow as tf
 import numpy as np
 import os
 import glob 
-# import tensorflow_hub as hub
+import tensorflow_hub as hub
 from sklearn.metrics.pairwise import cosine_similarity
 import streamlit as st
 import docx2txt
@@ -14,13 +14,13 @@ class nlp_backend:
         model = hub.load(model_url)
         return model
     
-    def JD_process(JD,uploadfile):
-        jd = docx2txt.process(uploadfile)
+    def JD_process(docx_file):
+        JD1 = docx2txt.process(docx_file)
         return JD_process
     
-    def Resumes_process(uploaded_file1,resumes1):
-        resume = glob.glob(uploaded_file1,recursive=True)
-        return Resumes_process
+    def Resumes(uploaded_file):
+        resumes = glob.glob('uploaded_file',recursive = True)
+        return Resumes
     
     def check_sim(job_desc: str):
 
