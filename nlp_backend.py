@@ -14,11 +14,11 @@ class nlp_backend:
         model = hub.load(model_url)
         return model
     
-    def JD_process(docx_file):
+    def JD_process(self):
         JD1 = docx2txt.process(docx_file)
         return JD_process
     
-    def Resumes(uploaded_file):
+    def Resumes(self):
         resumes = glob.glob('uploaded_file',recursive = True)
         return Resumes
     
