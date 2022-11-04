@@ -39,8 +39,8 @@ def main():
     pdf_file = st.file_uploader("Resumes",accept_multiple_files=True)
     if st.button("Submit"):
         if pdf_file is not None:
-            file_details = {"filename":pdf_file.name,"filetype":pdf_file.type,"filesize":pdf_file.size}
-            st.write(file_details)
+#             file_details = {"filename":pdf_file.name,"filetype":pdf_file.type,"filesize":pdf_file.size}
+#             st.write(file_details)
             if pdf_file.type == "text/pdf":
                 raw_text = str(pdf_file.read(),"utf-8")
                 st.text(raw_text)
