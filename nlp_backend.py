@@ -22,7 +22,7 @@ class nlp_backend:
         resumes = glob.glob('uploaded_file',recursive = True)
         return Resumes
     
-    def check_sim(job_desc: str):
+    def check_sim(JD1,resumes):
 
         model_obj = nlp_backend.load_model()
         resumes = nlp_backend.Resumes()
