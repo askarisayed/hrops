@@ -18,7 +18,7 @@ def read_pdf(uploaded_file):
 def main():
     
     st.title("Hrops")
-    # backend = nlp_backend()
+    backend = nlp_backend()
 
     #Upload the JD in Word Document Format
     st.subheader("Upload the Job Description")
@@ -41,14 +41,12 @@ def main():
         for page_layout in extract_pages(uploaded_file):
             for element in page_layout:
                 st.write(element)
-
-
-
-
-
-
-
-
-
+    
+    sim = backend.check_sim(docx_file,uploaded_file)
+    if st.button("Get the Top Resumes"):
+        st.write("here are top resumes",sim)
+    else:
+        st.write("Error")
+        
 if __name__ == "__main__":
     main()
