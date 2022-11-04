@@ -35,6 +35,8 @@ def main():
                 pass
             raw_text = docx2txt.process(docx_file)
             st.write(raw_text)
+     jd_description = backend.JD_process(docx_file)
+
     
     # Upload the Resumes in PDF or Text Format. 
     uploaded_file = st.file_uploader("Choose a file", "pdf")
@@ -42,8 +44,9 @@ def main():
         for page_layout in extract_pages(uploaded_file):
             for element in page_layout:
                 st.write(element)
+     resume_res = backend.Resumes(uploaded_file)
     
-    sim = backend.check_sim(docx_file,uploaded_file)
+    sim = backend.check_sim(jd_description,resume_res)
     
     if st.button("Get the Top Resumes"):
         st.write("here are top resumes",sim)
