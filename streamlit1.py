@@ -5,14 +5,14 @@ import docx2txt
 import pdfminer
 from pdfminer.high_level import extract_pages
 
-# def read_pdf(pdf_file):
-#     pdfReader = PdfFileReader(pdf_file)
-#     count = pdfReader.numPages
-#     all_page_text = ""
-#     for i in range(count):
-#         page = pdfReader.getPage(i)
-#         all_page_text += page.extractText()
-#     return all_page_text
+def read_pdf(uploaded_file):
+    pdfReader = PdfFileReader(uploaded_file)
+    count = pdfReader.numPages
+    all_page_text = ""
+    for i in range(count):
+        page = pdfReader.getPage(i)
+        all_page_text += page.extractText()
+    return all_page_text
 
 
 def main():
