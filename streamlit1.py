@@ -4,6 +4,7 @@ from streamlit import components
 import docx2txt
 import pdfminer
 from pdfminer.high_level import extract_pages
+from nlp_backend import nlp_backend
 
 def read_pdf(uploaded_file):
     pdfReader = PdfFileReader(uploaded_file)
